@@ -59,8 +59,7 @@ while (!dadosValidos)
     dadoSplitado = dado.Select(x => x.ToString()).ToArray();
     mensagemErro = "";
     dadosValidos = true;
-
-};
+}
 
 dadosValidos = false;
 
@@ -74,7 +73,7 @@ while (!dadosValidos)
     }
 
     Console.WriteLine("O dado a ser verificado é o: " + dado);
-    Console.WriteLine("Informe o poliômio:");
+    Console.WriteLine("Informe o polinômio:");
     polinomio = Console.ReadLine().ToLower();
 
     if (string.IsNullOrWhiteSpace(polinomio))
