@@ -117,7 +117,7 @@ foreach (var valor in valoresDoPolinomio)
 {
     if (int.TryParse(valor, out var resultado))
     {
-        var index = (int.Parse(valor) - verificador.Count) * -1;
+        var index = (resultado - verificador.Count) * -1;
         verificador[index - 1] = 1;
     }
 }
@@ -171,7 +171,7 @@ List<int> ObterDadoComZerosDoPolinomio()
 {
     List<int> retorno = dadoSplitado.Select(x => int.Parse(x)).ToList();
 
-    for (int i = 0; i < (int)grauDoPolinomio-1; i++)
+    for (int i = 0; i < (int)grauDoPolinomio; i++)
     {
         retorno.Add(0);
     }
