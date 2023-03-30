@@ -1,4 +1,4 @@
-﻿using CRC;
+﻿using Util;
 
 var dadosValidos = false;
 var mensagemErro = "";
@@ -25,19 +25,7 @@ while (!dadosValidos)
         mensagemErro = "Informe o dado a ser verificado!";
         continue;
     }
-
-    if (dado.Length < 32)
-    {
-        mensagemErro = "O dado informado tem menos de 32 bits";
-        continue;
-    }
-
-    if (dado.Length > 128)
-    {
-        mensagemErro = "O dado informado tem mais de de 128 bits";
-        continue;
-    }
-
+    
     var reiniciarCiclo = false;
     for (int i = 0; i < dado.Length; i++)
     {
@@ -54,6 +42,19 @@ while (!dadosValidos)
 
     if (reiniciarCiclo)
         continue;
+
+    if (dado.Length < 32)
+    {
+        mensagemErro = "O dado informado tem menos de 32 bits";
+        continue;
+    }
+
+    if (dado.Length > 128)
+    {
+        mensagemErro = "O dado informado tem mais de de 128 bits";
+        continue;
+    }
+
 
     dadoSplitado = dado.Select(x => x.ToString()).ToArray();
     mensagemErro = "";

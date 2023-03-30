@@ -1,4 +1,4 @@
-﻿namespace CRC
+﻿namespace Util
 {
     public static class GrauDoPolinomioUtil
     {
